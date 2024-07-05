@@ -10,7 +10,10 @@ La letra "u" es convertida para "ufat"
 function encriptar(){
     let textoEncriptar = document.getElementById('inputTexto').value.toLowerCase();
     textoEncriptar = textoEncriptar.replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u');
-    return textoEncriptar.replace(/e/g,'enter').replace(/i/g,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
+    const textoIndicador = document.getElementById('textoInidicador');
+    textoIndicador.innerHTML = textoEncriptar.replace(/e/g,'enter').replace(/i/g,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
+    const btn = document,getElementById('botonCopiar');
+    btn.style.visibility = 'visible';
 }
 
 function desencriptar(){
