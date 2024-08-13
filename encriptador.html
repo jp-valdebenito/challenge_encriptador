@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header></header>
     <main class="contenido">
+        <div class="contenido__icono">
+            <img class="contenido__icono__img" src="assets/icono_alura_1.png" alt="Icono de Alura Latam">
+        </div>
         <div class="contenido__input">
-            <img class="contenido__input__icono" src="assets/icono_alura_1.png" alt="Icono de Alura Latam">
-            <textarea name="textoIngresado" id="inputTexto" class="contenido__input__texto" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea name="textoIngresado" id="inputTexto" class="contenido__input__texto" placeholder="Ingrese el texto aquí" onchange=""></textarea>
             <div class="contenido__input_advertencia">
                 <img src="assets/icono_mensaje_1.png" alt="Icono de Advertencia">
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenido__input__botones">
-                <button class="contenido__input__botones__encriptar" onclick="console.log(encriptar())">Encriptar</button>
-                <button class="contenido__input__botones__desencriptar" onclick="console.log(desencriptar())">Desencriptar</button>
+                <button id="encripta" class="contenido__input__botones__encriptar" onclick="encriptar();">Encriptar</button>
+                <button id="desencripta" class="contenido__input__botones__desencriptar" onclick="desencriptar();">Desencriptar</button>
             </div>
         </div>
         <div class="contenido__output">
             <div class="contenido__output__caja">
-            <img class="contenido__output__caja__imagen" src="assets/img_busqueda_1.png" alt="Muñeco buscando resultados">
-            <h2 class="contenido__output__caja__subtitulo">Ningún mensaje fue encontrado</h2>
-            <p class="contenido__output__caja__texto">Ingresa el texto que desees encriptar o desencriptar</p>
-            <button class="contenido__output__caja__copiar" onclick="" >Copiar</button>
+                <div class="contenido__output__caja__c1">
+                    <img id="imagenIndicador" class="contenido__output__caja__imagen" src="assets/img_busqueda_1.png" alt="Buscando resultados">
+                    <h2 id="tituloIndicador" class="contenido__output__caja__subtitulo">Ningún mensaje fue encontrado</h2>
+                    <p id="textoIndicador" class="contenido__output__caja__texto">Ingresa el texto que desees encriptar o desencriptar</p>        
+                </div>
+                <div class="contenido__output__caja__c2">
+                    <button id="botonCopiar" class="contenido__output__caja__copiar" onclick="copiarMensaje();" >Copiar</button>
+                </div>
             </div>
         </div>
     </main>
-    <footer></footer>
     <script src="script/encriptador.js"></script>
 </body>
 </html>
